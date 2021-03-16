@@ -3,21 +3,21 @@ agent any
 stages{
 stage('compile stage'){
 steps{
-withMaven(maven:"maven_HOME'){
+withMaven(maven:"MAVEN_HOME'){
 sh'mvn clean compile'
 }
 }
 }
 stage('Testing.stage'){
 steps{
-withMaven(maven:'Maven_HOME'){
+withMaven(maven:'MAVEN_HOMEE'){
 sh'mvn test'
 }
 }
 }
 stage('Deployment.stage'){
 steps{
-withMaven(maven:'Maven_HOME'){
+withMaven(maven:'MAVEN_HOMEE'){
 sh'mvn Deploy'
 }
 }
